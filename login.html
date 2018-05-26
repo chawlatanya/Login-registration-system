@@ -1,0 +1,90 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+ 		 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+		body 
+		{
+			background-color: #f6f7f9;
+			font-family: helvetica;
+		}
+		h1{
+			border-bottom: 1px solid black;
+			text-align: center;
+			font-size: 30px;
+		}
+		
+		form
+		{
+			position: absolute;
+			top: 20%;
+			left: 35%;
+			width: 400px;
+			height: 400px;
+			background-color: #ffffff;
+			padding: 10px;
+			border-radius: 5px;
+			border:0.5px solid black;
+
+		}
+		.label1{
+			font-weight: 700;
+		}/*
+		input[type=password], input[type=email]
+		{
+			border-radius: 3px;
+			border: 1px solid #04BCD2;
+			display: block;
+		}
+		input[type=password], input[type=email]
+		{
+			height: 25px;
+		}
+		
+		.inputField
+		{
+			margin-top: 15px;
+		}
+		input[type=submit],input[type=button]
+		{
+			border-radius: 3px;
+			border: 1px solid #61196A;
+			background-color: #61196A;
+			color: #ffffff;
+			height: 25px;
+			width: 70px;
+			margin-top: 20px;
+			padding: 4px;
+		}*/
+
+		
+
+	</style>
+</head>
+<body>
+	
+<form action="login.php" method="POST">
+	<div class="form_heading">
+		<h1>Login</h1>
+	</div>
+		<div class="form-group">
+		<label>Email</label>
+		<input type="email" class="form-control" name="email" required/>
+	</div>
+	<div class="form-group">
+		<label>Password</label>
+		<input type="Password" class="form-control" name="pwd" required />
+		
+	</div>
+	<div class="form-group">
+		<input type="submit" class="btn btn-default btn-md btn-block btn-primary label1" value="Login" name="login" />
+	</div>
+	<div class="form-group">
+		<a href="reg.html"><input type="button" class="btn btn-default btn-md btn-block btn-secondary label1" value="Back" name="back" /></a>
+	</div>
+</form>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Register Here
+		</title>
+		 <meta name="viewport" content="width=device-width, initial-scale=1">
+ 		 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<style type="text/css">
+		body{
+			font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+		}
+			form{
+			position: absolute;
+			top: 20%;
+			left: 35%;
+			width: 400px;
+			height: 400px;
+			background-color: #ffffff;
+			padding: 10px;
+			}
+			.form_head{
+				border-bottom: 1px solid black;
+				font-size: 20px;
+				font-weight:700;
+			}
+			.label{
+				font-size:17px;
+				font-weight: 700;
+				color: 8E5585;
+			}
+			input[type=text], input[type=Email],input[type=password]
+		{
+			border-radius: 3px;
+			border: 1px solid black;
+			display: block;
+			height: 20px;
+			width: 330px;
+		}
+		input[type=submit]
+		{
+			border-radius: 3px;
+			border: 1px solid #686868;
+			background-color: #686868;
+			color: #ffffff;
+			height: 25px;
+			width: 70px;
+			margin-top: 10px;
+			padding: 4px;
+
+		}
+		</style>
+	
+	</head>
+	<body bgcolor="#686868">
+		<form  name="register" method="POST" action="reg.php" onsubmit="return validate_form()">
+			<div class="form_head" align="center">
+				Register Here
+			</div>
+			<table>
+				<tr>
+					<td class="label">Name:</td>
+				</tr>
+				<tr>
+					<td class="field"><input type="text" name="name" required></td>
+				</tr>
+				<tr>
+					<td class="label">Email:</td>
+				</tr>
+				<tr>
+					<td class="field"><input type="email" name="email" required></td>
+				</tr>
+				<tr>
+					<td class="label">University:</td>
+				</tr>
+				<tr>
+					<td class="field"><input type="text" name="univ" required></td>
+				</tr>
+				<tr>
+					<td class="label">Password:</td>
+				</tr>
+				<tr>
+					<td class="field"><input type="Password" name="pwd" id="pwd" required></td>
+				</tr>
+				<tr>
+					<td class="label">Confirm Password:</td>
+				</tr>
+				<tr>
+					<td class="field"><input type="Password" name="cpwd" id="cpwd" required></td>
+				</tr>
+				<tr>
+					<td class="label">Phone Number:</td>
+				</tr>
+				<tr>
+					<td class="field"><input type="text" id="phone" name="phone" required></td>
+				</tr>
+				</table>
+					<div align="center"><input type="submit" name="submit" value="Register" /></div>
+
+						
+		</form>
+		<script>
+			function validate_form(){
+				var  pwd=document.getElementById("pwd").value;
+				var  cpwd=document.getElementById("cpwd").value;
+				if(pwd!=cpwd){
+					window.alert("Passwords do not match. Please enter again.");
+					return false;
+
+				}
+				var phone=document.getElementById("phone");
+				var phone_val = phone.value;
+				p=/^[0-9]{10}$/;
+
+				if(!phone_val.match(p)){
+					window.alert("Enter a valid phone number")
+					phone.focus();
+					return false;
+				}
+			}
+		</script>
+
+	</body>
+	</html>
+
+

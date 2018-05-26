@@ -1,0 +1,82 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	<style>
+		body 
+		{
+			background-color: #f6f7f9;
+			font-family: helvetica;
+		}
+		h1{
+			border-bottom: 1px solid black;
+		}
+		
+		form
+		{
+			position: absolute;
+			top: 20%;
+			left: 35%;
+			width: 400px;
+			height: 400px;
+			background-color: #ffffff;
+			padding: 10px;
+
+		}
+		label{
+			font-weight: 600;
+		}
+		input[type=password], input[type=email]
+		{
+			border-radius: 3px;
+			border: 1px solid #04BCD2;
+			display: block;
+		}
+		input[type=password], input[type=email]
+		{
+			height: 25px;
+		}
+		
+		.inputField
+		{
+			margin-top: 15px;
+		}
+		input[type=submit],input[type=button]
+		{
+			border-radius: 3px;
+			border: 1px solid #61196A;
+			background-color: #61196A;
+			color: #ffffff;
+			height: 25px;
+			width: 70px;
+			margin-top: 20px;
+			padding: 4px;
+		}
+
+		
+
+	</style>
+</head>
+<body>
+	
+<form action="login.php" method="POST">
+	<div class="form_heading">
+		<h1>LOGIN</h1>
+	</div>
+		<div class="inputField">
+		<label>Email:</label>
+		<input type="email" name="email" required/>
+	</div>
+	<div class="inputField">
+		<label>Password:</label>
+		<input type="Password" name="pwd" required />
+		
+	</div>
+	<div class="inputField">
+		<input type="submit" value="Login" name="login" />
+	</div>
+	<div class="inputField">
+		<a href="reg.html"><input type="button" value="Back" name="back" /></a>
+	</div>
+</form>
+</body>
+</html>
